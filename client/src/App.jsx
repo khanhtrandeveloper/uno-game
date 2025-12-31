@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:4000";
+const SERVER_URL = import.meta.env.PROD ? window.location.origin : "http://localhost:4000";
 const COLOR_OPTIONS = ["red", "yellow", "green", "blue"];
 
 const CARD_LABELS = {
